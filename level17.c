@@ -9,16 +9,6 @@
 #define seven 5
 #define eight 5
 #define nine 4
-#define ten 3
-#define eleven 6
-#define twelve 6
-#define thirteen 8
-#define fourteen 8
-#define fifteen 7
-#define sixteen 7
-#define seventeen 9
-#define eighteen 9
-#define nineteen 8
 #define twenty 6
 #define thirty 6
 #define forty 5
@@ -31,7 +21,7 @@
 #define thousand 8
 
 #define one_to_nine 36
-#define ten_to_nineteen 71
+#define ten_to_nineteen 70
 
 /*
 
@@ -75,24 +65,23 @@ int	calc_twenty_to_ninety()
 	int	sum;
 
 	sum = 0;
-	sum += 10 * (twenty + one_to_nine);
-	sum += 10 * (thirty + one_to_nine);
-	sum += 10 * (forty + one_to_nine);
-	sum += 10 * (fifty + one_to_nine);
-	sum += 10 * (sixty + one_to_nine);
-	sum += 10 * (seventy + one_to_nine);
-	sum += 10 * (eighty + one_to_nine);
-	sum += 10 * (ninety + one_to_nine);
+	sum += 10 * (10 * twenty + one_to_nine);
+	sum += 10 * (10 * thirty + one_to_nine);
+	sum += 10 * (10 * forty + one_to_nine);
+	sum += 10 * (10 * fifty + one_to_nine);
+	sum += 10 * (10 * sixty + one_to_nine);
+	sum += 10 * (10 * seventy + one_to_nine);
+	sum += 10 * (10 * eighty + one_to_nine);
+	sum += 10 * (10 * ninety + one_to_nine);
 	sum += 10 * (one_to_nine);
 	sum += 10 * (ten_to_nineteen);
 	return (sum);
 }
-
 
 int	main (void)
 {
 	int	result;
 
 	result = calc_hundred() + calc_twenty_to_ninety();
-	printf("result: %d \n", result);
+	printf("result: %d \n", result); //result: 21124
 }
