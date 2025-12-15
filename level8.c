@@ -160,7 +160,6 @@ int	main (void)
 			}
 			if (res == 2)
 			{
-				printf("%d \n", i);
 				free(first_val);
 				first_val = strdup(multipler(-2));
 			}
